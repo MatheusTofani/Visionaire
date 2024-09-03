@@ -1,0 +1,16 @@
+@use 'header.scss';
+@use 'hero.scss';
+@use 'sobre.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.container {
+    width: 1336px;
+    margin: 0 auto;
+}
+

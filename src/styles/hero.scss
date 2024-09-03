@@ -1,0 +1,80 @@
+.hero {
+    background-image: url(../images/hero.png);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.733);
+        height: 100%;
+        width: 100%;
+    }
+
+    &__content {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+
+        &__logo {
+            filter: brightness(0.5) invert(1);
+        }
+
+        &__text {
+            color: white;
+            font-size: 20px;
+        }
+
+        &__time {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        &__button {
+            background-color: #daa520;
+            color: white;
+            text-decoration: none;
+            padding: 13px;
+            font-weight: 600;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 50px;
+            transition: all .1s;
+            position: relative;
+            overflow-y: hidden;
+            &::after {
+                position: absolute;
+                content: 'Indo!';
+                top: -100%;
+                right: 0;
+                background-color: #d3aa43;
+                transition: top .3s;
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &:hover {
+                &::after{
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+

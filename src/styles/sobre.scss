@@ -1,0 +1,31 @@
+.sobre {
+    &__content {
+
+        &__item {
+            background-color: #daa520;
+
+            &__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &__img {
+                height: 100%;
+                display: block;
+            }
+
+            &__text {
+                color: black;
+                margin: 0 auto;
+                font-size: 20px;
+                width: 40%;
+
+                &__title {
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}

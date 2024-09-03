@@ -1,0 +1,64 @@
+.header {
+    box-shadow: 0 2px 4px rgba(65, 62, 62, 0.3);
+    height: 0px;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5DC;
+    position: sticky;
+    right: 0;
+    top: -100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s, opacity 0.3s, visibility 0.3s, height 0.3s;
+    ;
+
+    &__active {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+        height: 80px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__branding {
+        height: 100px;
+
+        @media (max-width: 678) {
+            content: url(../images/logo2.png);
+            height: 75px;
+        }
+    }
+
+    &__list {
+        @media (max-width: 678) {
+            display: none;
+        }
+
+        &__content {
+            &__link {
+                text-decoration: none;
+                color: rgb(19, 1, 16);
+                transition: all .2s;
+
+                &:hover {
+                    color: #daa520;
+                }
+            }
+
+            &__item {
+                display: inline;
+                margin-left: 40px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.header:not(.header__active) {
+    top: -100px;
+}
