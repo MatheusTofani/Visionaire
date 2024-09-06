@@ -1,11 +1,33 @@
 .sobre {
     &__content {
         &__item2 {
-            &__text{
-                font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px 0;
+
+            @media (max-width: 678PX) {
+                display: block;
+                text-align: center;
+                width: 100vw;
             }
-            &__img{
+
+            &__text {
+                font-size: 20px;
+                
+
+                @media (max-width: 678PX) {
+                    font-size: 15px;
+                }
+            }
+
+            &__img {
                 height: 500px;
+
+                @media (max-width: 678PX) {
+                    height: 350px;
+                    margin-top: 50px;
+                }
             }
         }
 
@@ -16,6 +38,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
             }
 
             &__img {

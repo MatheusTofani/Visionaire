@@ -71,7 +71,17 @@
             text-align: center;
 
             @media (max-width: 678PX) {
-                display: none;
+                position: relative;
+                top: -200px;
+                transition: height, top .3s;
+                height: 0;
+            }
+        }
+
+        &--active {
+            @media (max-width: 678PX) {
+                top: 0;
+                height: 100px;
             }
         }
 

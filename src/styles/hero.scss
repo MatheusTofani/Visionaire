@@ -28,11 +28,20 @@
 
         &__logo {
             filter: brightness(0.5) invert(1);
+
+            @media (max-width: 678PX) {
+                height: 150px;
+            }
         }
 
         &__text {
             color: white;
             font-size: 20px;
+
+            @media (max-width: 678PX) {
+                font-size: 17px;
+                text-align: center;
+            }
         }
 
         &__time {
@@ -40,6 +49,9 @@
             font-size: 30px;
             font-weight: bold;
             margin-top: 30px;
+            @media (max-width: 678PX) {
+               font-size: 25px;
+            }
         }
 
         &__button {
@@ -54,6 +66,7 @@
             transition: all .1s;
             position: relative;
             overflow-y: hidden;
+
             &::after {
                 position: absolute;
                 content: 'Indo!';
@@ -70,11 +83,10 @@
             }
 
             &:hover {
-                &::after{
+                &::after {
                     top: 0;
                 }
             }
         }
     }
 }
-
