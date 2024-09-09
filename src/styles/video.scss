@@ -1,8 +1,57 @@
-video {
-    height: 300px;
-    clip-path: circle(20%);
+@use 'variables';
+
+.video {
+    display: flex;
+    align-items: center;
     position: fixed;
-    top: 78%;
-    left: 0%;
+    top: 84%;
+    left: 2%;
     z-index: 5;
+    cursor: pointer;
+
+    &:hover {
+        .video__text {
+            width: 200px;
+            color: variables.$color-white;
+        }
+
+        .video__item {
+            border: solid 3px variables.$color-golden;
+            transition: all 0.1s;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        top: 80%;
+    }
+
+    &__item {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        z-index: 5;
+
+        @media (max-width: 678px) {
+            height: 80px;
+            width: 80px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0px;
+        height: 30px;
+        background-color: variables.$color-dark-brown;
+        color: rgba(255, 255, 255, 0);
+        margin-left: -50px;
+        border-radius: 10px;
+        transition: width 0.3s;
+
+        @media (max-width: 1024px) {
+            width: 0;
+        }
+    }
 }

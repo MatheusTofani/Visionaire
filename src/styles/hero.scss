@@ -1,12 +1,11 @@
+@use 'variables';
+
 .hero {
-    background-image: url(../images/hero.png);
+    background-image: url('../images/hero.png');
     min-height: 100vh;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     position: relative;
-
 
     &::before {
         content: '';
@@ -26,59 +25,57 @@
         align-items: center;
         justify-content: center;
         position: absolute;
+        text-align: center;
+
         &__logo {
             filter: brightness(0.5) invert(1);
 
-            @media (max-width: 678PX) {
+            @media (max-width: 678px) {
                 height: 120px;
             }
         }
 
         &__text {
-            color: white;
-            font-size: 20px;
+            color: variables.$color-white;
+            margin: 15px 0;
+            font-size: 25px;
 
-            @media (max-width: 678PX) {
-                font-size: 15px;
-                text-align: center;
-            }
-
-            @media (min-width:679px) and (max-width: 1024PX) {
-              text-align: center;
+            @media (max-width: 678px) {
+                font-size: 20px;
             }
         }
 
         &__time {
-            color: white;
-            font-size: 30px;
+            color: variables.$color-white;
+            font-size: 40px;
             font-weight: bold;
             margin-top: 30px;
 
-            @media (max-width: 678PX) {
+            @media (max-width: 678px) {
                 font-size: 20px;
             }
         }
 
         &__button {
-            background-color: #daa520;
-            color: white;
+            background-color: variables.$color-golden;
+            color: variables.$color-white;
             text-decoration: none;
-            padding: 13px;
+            padding: 13px 25px;
             font-weight: 600;
             border-radius: 5px;
             font-size: 20px;
             margin-top: 50px;
-            transition: all .1s;
+            transition: all 0.1s;
             position: relative;
-            overflow-y: hidden;
+            overflow: hidden;
 
             &::after {
                 position: absolute;
                 content: 'Indo!';
                 top: -100%;
                 right: 0;
-                background-color: #d3aa43;
-                transition: top .3s;
+                background-color: variables.$color-golden-dark;
+                transition: top 0.3s;
                 text-align: center;
                 height: 100%;
                 width: 100%;
@@ -91,6 +88,11 @@
                 &::after {
                     top: 0;
                 }
+            }
+
+            @media (max-width: 678px) {
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
     }

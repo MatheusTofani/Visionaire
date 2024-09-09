@@ -1,52 +1,60 @@
+@use 'variables';
+
 .sobre {
     overflow-x: hidden;
 
-
     &__content {
         &__item2 {
-
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 200px;
+            width: 100%; 
 
-            @media (max-width: 1024PX) {
+            @media (max-width: 1024px) {
                 display: block;
                 text-align: center;
-                max-width: 100vw;
+                margin-top: 100px;
+                width: 100%; 
             }
 
             &__text {
                 font-size: 20px;
+                width: 45%;
 
-
-                @media (max-width: 678PX) {
+                @media (max-width: 678px) {
                     font-size: 15px;
+                    width: 100%; 
+                }
+
+                @media (min-width: 679px) and (max-width: 1024px) {
+                    font-size: 18px;
+                    width: 100%; 
                 }
             }
 
             &__img {
                 height: 500px;
 
-                @media (max-width: 678PX) {
+                @media (max-width: 678px) {
                     height: 300px;
                     margin-top: 50px;
                 }
 
-                @media (min-width:679px) and (max-width: 1024PX) {
-                    margin-top: 100px;
+                @media (min-width: 679px) and (max-width: 1024px) {
                     height: 400px;
+                    margin-top: 100px;
                 }
             }
         }
 
         &__item {
             margin-top: 200px;
-            background-color: #daa520;
+            background-color: variables.$color-golden;
+            width: 100%; 
 
-            @media (max-width: 1024PX) {
-                width: 100vw;
-                padding: 50px 0;
+            @media (max-width: 1024px) {
+                width: 100%; 
             }
 
             &__container {
@@ -54,13 +62,13 @@
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
+                width: 100%; 
 
-
-                @media (max-width: 1024PX) {
+                @media (max-width: 1024px) {
                     display: block;
                     text-align: center;
                     margin: 0 auto;
-                    
+                    width: 100%; 
                 }
             }
 
@@ -68,34 +76,34 @@
                 height: 100%;
                 display: block;
 
-                @media (max-width: 678PX) {
-                    content: url(../images/corpretaCelular.png);
+                @media (max-width: 678px) {
+                    content: url('../images/corpretaCelular.png');
                     height: 300px;
-                    margin-left: 50px;
+                    margin: 0 auto;
                 }
 
-                @media (min-width:679px) and (max-width: 1024PX) {
-                    content: url(../images/corpretaCelular.png);
+                @media (min-width: 679px) and (max-width: 1024px) {
+                    content: url('../images/corpretaCelular.png');
                     height: 400px;
-                    margin-left: 200px;
+                    margin: 0 auto;
                 }
             }
 
             &__text {
-                color: black;
+                color: variables.$color-dark-brown;
                 margin: 0 auto;
                 font-size: 20px;
-                width: 40%;
+                width: 40%; 
 
-                @media (max-width: 678PX) {
-                    width: 100vw;
+                @media (max-width: 678px) {
+                    width: 100%; 
                     margin: 0;
                     font-size: 15px;
                 }
 
-                @media (min-width:679px) and (max-width: 1024PX) {
+                @media (min-width: 679px) and (max-width: 1024px) {
                     font-size: 18px;
-                    width: 100vw;
+                    width: 100%; 
                     margin: 0;
                 }
 
@@ -104,7 +112,7 @@
                     margin-bottom: 40px;
                     text-decoration: underline;
 
-                    @media (max-width: 678PX) {
+                    @media (max-width: 678px) {
                         margin-bottom: 20px;
                     }
                 }

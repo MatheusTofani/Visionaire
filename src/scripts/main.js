@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.header__list');
 
     menuButton.addEventListener('click', function () {
-        menu.classList.toggle('header__list--active')
-    })
+        menu.classList.toggle('header__list--active');
+    });
 
     window.addEventListener('scroll', function () {
         const currentScrollY = window.scrollY;
@@ -15,14 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (currentScrollY > lastScrollY && sobreTop <= 0) {
             header.classList.add('header__active');
-            
         }
-
         else if (currentScrollY < lastScrollY || sobreTop > 0) {
             header.classList.remove('header__active');
             menu.classList.remove('header__list--active');
         }
-
 
         lastScrollY = currentScrollY;
     });
