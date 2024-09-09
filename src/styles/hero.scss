@@ -7,6 +7,7 @@
     background-position: center;
     position: relative;
 
+
     &::before {
         content: '';
         position: absolute;
@@ -25,12 +26,11 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-
         &__logo {
             filter: brightness(0.5) invert(1);
 
             @media (max-width: 678PX) {
-                height: 150px;
+                height: 120px;
             }
         }
 
@@ -39,8 +39,12 @@
             font-size: 20px;
 
             @media (max-width: 678PX) {
-                font-size: 17px;
+                font-size: 15px;
                 text-align: center;
+            }
+
+            @media (min-width:679px) and (max-width: 1024PX) {
+              text-align: center;
             }
         }
 
@@ -49,8 +53,9 @@
             font-size: 30px;
             font-weight: bold;
             margin-top: 30px;
+
             @media (max-width: 678PX) {
-               font-size: 25px;
+                font-size: 20px;
             }
         }
 

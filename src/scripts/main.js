@@ -15,10 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (currentScrollY > lastScrollY && sobreTop <= 0) {
             header.classList.add('header__active');
+            
         }
 
         else if (currentScrollY < lastScrollY || sobreTop > 0) {
             header.classList.remove('header__active');
+            menu.classList.remove('header__list--active');
         }
 
 

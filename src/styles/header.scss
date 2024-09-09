@@ -17,7 +17,7 @@
         visibility: visible;
         height: 80px;
 
-        @media (max-width: 678px) {
+        @media (max-width: 1024px) {
             height: auto;
             min-height: 80px;
         }
@@ -28,7 +28,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @media (max-width: 678px) {
+        @media (max-width: 1024px) {
             display: block;
         }
     }
@@ -49,7 +49,7 @@
                 margin-bottom: 5px;
                 display: none;
 
-                @media (max-width: 678PX) {
+                @media (max-width: 1024PX) {
                     display: block;
                 }
             }
@@ -59,7 +59,7 @@
     &__branding {
         height: 100px;
 
-        @media (max-width: 678PX) {
+        @media (max-width: 1024PX) {
             content: url(../images/logo2.png);
             margin-left: 10px;
             height: 50PX;
@@ -67,19 +67,24 @@
     }
 
     &__list {
-        @media (max-width: 678px) {
+        @media (max-width: 1024px) {
             text-align: center;
 
-            @media (max-width: 678PX) {
+            @media (max-width: 1024PX) {
                 position: relative;
                 top: -200px;
-                transition: height, top .3s;
+                transition: height 0.3s ease, top 0.3s ease;
                 height: 0;
             }
         }
 
         &--active {
-            @media (max-width: 678PX) {
+            @media (max-width: 1024PX) {
+                top: 0;
+                height: 100px;
+            }
+
+            @media (min-width:679px) and (max-width: 1024PX) {
                 top: 0;
                 height: 100px;
             }
@@ -101,7 +106,7 @@
                 margin-left: 40px;
                 font-weight: 600;
 
-                @media (max-width: 678px) {
+                @media (max-width: 1024px) {
                     display: block;
                 }
 
