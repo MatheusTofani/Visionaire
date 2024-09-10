@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variaveis';
 
 .hero {
     background-image: url('../images/hero.png');
@@ -36,7 +36,7 @@
         }
 
         &__text {
-            color: variables.$color-white;
+            color: variaveis.$branco;
             margin: 15px 0;
             font-size: 25px;
 
@@ -46,7 +46,7 @@
         }
 
         &__time {
-            color: variables.$color-white;
+            color: variaveis.$branco;
             font-size: 40px;
             font-weight: bold;
             margin-top: 30px;
@@ -57,8 +57,8 @@
         }
 
         &__button {
-            background-color: variables.$color-golden;
-            color: variables.$color-white;
+            background-color: variaveis.$amarelo;
+            color: variaveis.$branco;
             text-decoration: none;
             padding: 13px 25px;
             font-weight: 600;
@@ -74,7 +74,7 @@
                 content: 'Indo!';
                 top: -100%;
                 right: 0;
-                background-color: variables.$color-golden-dark;
+                background-color: variaveis.$amareloBotao;
                 transition: top 0.3s;
                 text-align: center;
                 height: 100%;

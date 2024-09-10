@@ -1,11 +1,11 @@
-@use 'variables';
+@use 'variaveis';
 
 .header {
     box-shadow: 0 2px 4px rgba(65, 62, 62, 0.3);
     height: 0px;
     display: flex;
     align-items: center;
-    background-color: variables.$color-beige;
+    background-color: variaveis.$begeCordeFundo;
     position: sticky;
     right: 0;
     top: -100px;
@@ -55,7 +55,7 @@
             }
 
             &__item {
-                background-color: variables.$color-dark-brown;
+                background-color: variaveis.$marrom;
                 min-height: 3px;
                 min-width: 100%;
                 margin-bottom: 5px;
@@ -83,7 +83,7 @@
             top: 80px;
             left: 0;
             width: 100%;
-            background-color: variables.$color-beige;
+            background-color: variaveis.$begeCordeFundo;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
@@ -119,7 +119,7 @@
                     transition: color 0.2s;
 
                     &:hover {
-                        color: variables.$color-golden;
+                        color: variaveis.$amarelo;
                     }
                 }
             }

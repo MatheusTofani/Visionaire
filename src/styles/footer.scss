@@ -1,7 +1,7 @@
-@use 'variables';
+@use 'variaveis';
 
 .footer {
-    background-color: variables.$color-dark-brown;
+    background-color: variaveis.$marrom;
     padding: 20px 0;
 
     &__container {
@@ -9,12 +9,20 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
     }
 
     &__title {
-        color: variables.$color-white;
+        color: variaveis.$branco;
         font-size: 40px;
         margin-bottom: 10px;
+
+        @media (max-width: 1024px) {
+          text-align: center;
+        }
     }
 
     &__content {
@@ -22,10 +30,15 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-
+        @media (max-width: 1024px) {
+            display: block;
+            text-align: center;
+        }
         &__item {
-            color: variables.$color-white;
-
+            color: variaveis.$branco;
+            @media (max-width: 1024px) {
+                margin-top: 40px;
+            }
             &__link {
                 &:nth-of-type(2) {
                     margin: 0 50px;
@@ -34,18 +47,22 @@
 
             &__img {
                 transform: scale(1.9);
-                color: variables.$color-white;
+                color: variaveis.$branco;
                 transition: all .2s;
                 cursor: pointer;
 
 
                 &:hover {
-                    color: variables.$color-golden;
+                    color: variaveis.$amarelo;
                     ;
                 }
 
             }
         }
     }
-
+&__fim{
+    text-align: center;
+    color: variaveis.$branco;
+    padding-top: 20px;
+}
 }

@@ -4,6 +4,7 @@
 @use 'contato.scss';
 @use 'video.scss';
 @use 'footer.scss';
+@use 'variaveis.scss';
 
 * {
     margin: 0;
@@ -12,7 +13,7 @@
 }
 
 body {
-    background-color: #F5F5DC;
+    background-color: variaveis.$begeCordeFundo;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
